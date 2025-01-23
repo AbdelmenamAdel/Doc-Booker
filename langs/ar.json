@@ -1,0 +1,13 @@
+{
+    "language": "EN",
+    "skip": "تخطي",
+    "next": "التالي",
+    "start": "ابدأ",
+    "app_name":"Markaz Elamal",
+    "onBoardingTitleOne": "اختر طبيبك",
+    "onBoardingSubTitleOne": "يوفر التطبيق العديد من الأطباء ذوي الخبرة، يمكنك رؤية ملفاتهم الشخصية واختيار الطبيب الذي تريد حجز موعد معه.",
+    "onBoardingTitleTwo": "اختر التاريخ والوقت",
+    "onBoardingSubTitleTwo": "يساعدك التطبيق على اختيار التاريخ والوقت المناسبين لك وللطبيب الذي اخترته.",
+    "onBoardingTitleThree": "تواصل مع طبيبك",
+    "onBoardingSubTitleThree": "بمجرد الوصول إلى ملف الطبيب الذي اخترته، يمكنك التواصل معه وإرسال أي رسالة."
+}

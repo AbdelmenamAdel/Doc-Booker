@@ -1,0 +1,13 @@
+{
+    "language": "AR",
+    "skip": "Skip",
+    "next": "Next",
+    "start": "Start",
+    "app_name":"Markaz Elamal",
+    "onBoardingTitleOne": "Choose Your Doctor",
+    "onBoardingSubTitleOne": "The app provides you with a variety of experienced doctors. You can view their profiles and choose the one you'd like to book an appointment with.",
+    "onBoardingTitleTwo": "Select Date and Time",
+    "onBoardingSubTitleTwo": "The app helps you choose a date and time that works best for you and the doctor you've selected.",
+    "onBoardingTitleThree": "Communicate with Your Doctor",
+    "onBoardingSubTitleThree": "Once you access the profile of your selected doctor, you can communicate with them and send messages."
+}
