@@ -1,6 +1,8 @@
-import 'package:flutter/cupertino.dart';
-import 'package:markaz_elamal/core/language/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+
+import 'package:flutter/cupertino.dart';
+
+import 'package:markaz_elamal/core/language/app_localizations.dart';
 
 class AppLocalizationsSetup {
   static const Iterable<Locale> supportedLocales = [
