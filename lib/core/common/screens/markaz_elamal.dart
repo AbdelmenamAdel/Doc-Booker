@@ -4,7 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:markaz_elamal/core/app/app_cubit/app_cubit.dart';
 import 'package:markaz_elamal/core/app/app_cubit/app_state.dart';
 import 'package:markaz_elamal/core/language/app_localizations_setup.dart';
-import 'package:markaz_elamal/main.dart';
+import 'package:markaz_elamal/core/styles/theme/app_theme.dart';
+import 'package:markaz_elamal/features/welcome/views/splash_view.dart';
 
 class MarkazElamal extends StatelessWidget {
   const MarkazElamal({super.key});
@@ -12,7 +13,7 @@ class MarkazElamal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(375, 812),
+      designSize: const Size(428, 926),
       minTextAdapt: true,
       child: GestureDetector(
         onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
@@ -28,7 +29,7 @@ class MarkazElamal extends StatelessWidget {
                   AppLocalizationsSetup.localizationsDelegates,
               localeResolutionCallback:
                   AppLocalizationsSetup.localeResolutionCallback,
-              // theme: cubit.isDark ? themeLight() : themeDark(),
+              theme: themeLight(),
               home: const SplashView(),
               // onGenerateRoute: AppRoutes.onGenerateRoute,
               // initialRoute:
