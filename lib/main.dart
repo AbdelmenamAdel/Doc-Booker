@@ -1,25 +1,24 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:markaz_elamal/core/app/app_cubit/app_cubit.dart';
 import 'package:markaz_elamal/core/common/screens/markaz_elamal.dart';
+import 'package:markaz_elamal/core/services/shared_pref/pref_keys.dart';
+import 'package:markaz_elamal/core/services/shared_pref/shared_pref.dart';
 
 void main() {
-  runApp(const MarkazElamal());
-}
-
-class SplashView extends StatelessWidget {
-  const SplashView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Image.asset('assets/images/logo.png'),
-          const SizedBox(
-            height: 20,
-          ),
-          const Text('Markaz Elamal'),
-        ],
+  WidgetsFlutterBinding.ensureInitialized();
+  SharedPref().instantiatePreferences();
+  runApp(
+    DevicePreview(
+      builder: (context) => BlocProvider(
+        create: (context) => AppCubit()
+          ..changeAppThemeMode(
+            sharedMode: SharedPref().getBoolean(PrefKeys.themeMode),
+          )
+          ..getSavedLanguage(),
+        child: const MarkazElamal(),
       ),
-    );
-  }
+    ),
+  );
 }
