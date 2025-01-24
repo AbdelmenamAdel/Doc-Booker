@@ -5,27 +5,31 @@ import 'package:markaz_elamal/core/styles/colors/colors_light.dart';
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
     super.key,
-    required this.hintText,
-    required this.keyboardType,
+    this.hintText,
+    this.keyboardType,
     this.borderColor,
-    required this.labelText,
+    this.labelText,
+    this.prefixIcon,
+    this.suffixIcon,
   });
 
-  final String hintText;
-  final String labelText;
-  final TextInputType keyboardType;
+  final String? hintText;
+  final String? labelText;
+  final IconData? prefixIcon;
+  final IconData? suffixIcon;
+  final TextInputType? keyboardType;
   final Color? borderColor;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 45, // Adjust height with screen scaling if needed
-      width: 300, // Let it expand as needed
+      width: double.infinity, // Let it expand as needed
       child: TextField(
         style: Theme.of(context).textTheme.bodySmall!.copyWith(
-              color: ColorsLight.white,
+              color: borderColor ?? ColorsLight.white,
             ),
         keyboardType: keyboardType,
-        cursorColor: ColorsLight.white,
+        cursorColor: borderColor ?? ColorsLight.white,
         cursorErrorColor: Colors.red,
         decoration: InputDecoration(
           hintText: hintText,
@@ -36,6 +40,9 @@ class CustomTextField extends StatelessWidget {
           labelStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
                 color: borderColor ?? ColorsLight.white,
               ),
+          prefixIcon: prefixIcon != null ? Icon(prefixIcon) : null,
+          prefixIconColor: borderColor ?? ColorsLight.white,
+          suffixIcon: suffixIcon != null ? Icon(suffixIcon) : null,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(14), // Rounded corners
             borderSide:
