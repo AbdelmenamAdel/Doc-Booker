@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:markaz_elamal/core/extensions/context_extension.dart';
 import 'package:markaz_elamal/core/styles/fonts/font_family_helper.dart';
 import 'package:markaz_elamal/core/styles/fonts/font_weight_helper.dart';
+import 'package:markaz_elamal/core/styles/images/app_images.dart';
 import 'package:markaz_elamal/core/styles/strings/app_strings.dart';
 import 'package:markaz_elamal/features/welcome/views/onboarding_view.dart';
 
@@ -40,7 +41,7 @@ class _SplashViewState extends State<SplashView> {
             SizedBox(
                 height: 300.h,
                 width: 250.w,
-                child: Image.asset('assets/images/logo.png')),
+                child: Image.asset(AppImages.appLogo)),
             Text(
               context.translate(AppStrings.appName),
               style: Theme.of(context).textTheme.bodyLarge!.copyWith(

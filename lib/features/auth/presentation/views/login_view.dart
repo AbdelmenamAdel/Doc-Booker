@@ -20,7 +20,9 @@ class LoginView extends StatelessWidget {
               "Let's start with \nsign in",
               textAlign: TextAlign.left,
               style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                  color: ColorsLight.white, fontWeight: FontWeight.w600),
+                    color: ColorsLight.white,
+                    fontWeight: FontWeight.w500,
+                  ),
             ),
           ),
           const Spacer(),
